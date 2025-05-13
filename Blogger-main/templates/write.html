@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Blog - Medium Style</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/write.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script src="/static/js/shared/navbar.js" defer></script>
+
+    <main>
+        <div class="editor-container">
+            <h1>Create Your Blog Post</h1>
+            <form id="blogForm">
+                <div class="editor">
+                    <!-- Title Input -->
+                    <input type="text" id="blogTitle" name="title" placeholder="Enter your blog title" required />
+                    
+                    <!-- Content Textarea -->
+                    <textarea id="blogContent" name="content" placeholder="Write your blog content here..." required rows="10"></textarea>
+                    
+                    <!-- Tags Input -->
+                    <input type="text" id="blogTags" name="tags" placeholder="Enter tags, separated by commas" />
+
+                    <!-- Preview and Publish Buttons -->
+                    <button type="button" id="previewBtn">Preview</button>
+                    <button type="submit" id="publishBtn">Publish</button>
+                </div>
+            </form>
+            
+            <h2>Blog Preview</h2>
+            <div id="preview" class="preview">
+                <!-- Blog Preview Content -->
+                <div class="text">
+                    <h3 id="previewTitle"></h3>
+                    <p id="previewContent"></p>
+                    <p id="previewTags"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="/static/js/write.js"></script>
+</body>
+</html>
